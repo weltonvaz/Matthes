@@ -20,7 +20,18 @@ class Restaurant():
         """ Simula um cachorro rolandp em resposta a um comando."""
         return "Restaurante esta aberto"
 
-meu_restaurante = Restaurant('Albatroz','Francesa')
+class IceCreamStand(Restaurant):
+    """ Modela uma Sorveteria. """
+    def __init__(self, nome, tipo, *flavour):
+        Restaurant.__init__(self, nome, tipo)
+        self.flavour = flavour
+
+    def sabores(self):
+        return 'sabores: ' + str(self.flavour)
+            
+
+meu_restaurante = IceCreamStand('Salada','Italiana','napolitano','chocolate','morango')
 
 meu_restaurante.describe_restaurant()
+print(meu_restaurante.sabores())
 print(meu_restaurante.open_restaurant())
