@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+""" Criando configuração"""
 import os
 
 def cls():
@@ -22,4 +22,3 @@ for n in range(74207281,80000000,2):
 				h = str((2**n)-1)
 				if h[-1] == str('1') or h[-1] == str('7'):
 					print(n)
-				
